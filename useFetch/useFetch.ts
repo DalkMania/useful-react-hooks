@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
 export type FetchResponse = {
-  status: Number;
-  statusText: String;
+  status: number;
+  statusText: string;
   data: any;
   error: any;
-  loading: Boolean;
+  loading: boolean;
 };
 
 export const useFetch = (url: string): FetchResponse => {
-  const [status, setStatus] = useState<Number>(0);
-  const [statusText, setStatusText] = useState<String>("");
+  const [status, setStatus] = useState<number>(0);
+  const [statusText, setStatusText] = useState<string>("");
   const [data, setData] = useState<any>();
   const [error, setError] = useState<any>();
   const [loading, setLoading] = useState<boolean>(false);
