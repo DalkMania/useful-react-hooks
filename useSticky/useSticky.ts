@@ -1,8 +1,8 @@
 import { useState } from "react";
-import type { MutableRefObject } from "react";
+import type { RefObject } from "react";
 import { useScrollPosition } from "../useScrollPosition/useScrollPosition";
 
-export const useSticky = <T extends HTMLElement = HTMLElement>(ref: MutableRefObject<T | null>, top: number) => {
+export const useSticky = <T extends HTMLElement = HTMLElement>(ref: RefObject<T | null>, top: number) => {
   const [isSticky, setIsSticky] = useState(false);
 
   useScrollPosition(

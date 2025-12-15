@@ -1,4 +1,4 @@
-import { useRef, DependencyList, MutableRefObject } from "react";
+import { useRef, DependencyList, RefObject } from "react";
 import { useIsomorphicLayoutEffect } from "../useIsomorphicLayoutEffect/useIsomorphicLayoutEffect";
 
 interface IPosition {
@@ -11,7 +11,7 @@ interface IScrollProps {
   currPos: IPosition;
 }
 
-type ElementRef = MutableRefObject<HTMLElement | null>;
+type ElementRef = RefObject<HTMLElement | null>;
 
 const isBrowser = typeof window !== `undefined`;
 const zeroPosition = { x: 0, y: 0 };
